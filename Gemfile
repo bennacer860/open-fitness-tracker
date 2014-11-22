@@ -43,7 +43,7 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'factory_girl_rails'
-  gem 'respec-rails'
+  gem 'rspec-rails'
   gem 'webrat'
   gem 'database_cleaner'
 end
@@ -51,7 +51,7 @@ end
 #enable better error handling
 group :development do
   gem 'meta_request',  '~> 0.2.1',:require => 'meta_request'
-  gem 'better_errors' '~> 2.0.0'
+  gem 'better_errors'
   gem 'binding_of_caller'   
 end
 
