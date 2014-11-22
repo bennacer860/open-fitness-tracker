@@ -1,4 +1,4 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :fitbit, '2e7beac860d440e5aa68e10d679ff3bf', '856dc857059c4cbba43bfaa8dbf56d98'
+  provider :fitbit,  Configuration.where(:name=>"consumer_key").first.value, Configuration.where(:name=>"consumer_secret").first.value
 end
 
