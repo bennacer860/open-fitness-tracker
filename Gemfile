@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 
+gem 'fitgem'
+gem 'omniauth-fitbit'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -36,3 +39,19 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'respec-rails'
+  gem 'webrat'
+  gem 'database_cleaner'
+end
+
+#enable better error handling
+group :development do
+  gem 'meta_request',  '~> 0.2.1',:require => 'meta_request'
+  gem 'better_errors' '~> 2.0.0'
+  gem 'binding_of_caller'   
+end
+
