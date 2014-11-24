@@ -15,7 +15,7 @@
 
 
 <% if current_user %>
-  Signed as <%= current_user%>
+  Signed as <%= current_user.name %>
   <%= link_to "Sign out",logout_path%> 
 <% else %>
   <%= link_to "Sign In With Fitbit", "/auth/fitbit"%> 

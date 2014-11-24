@@ -1,10 +1,11 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :name
   
-  def self.create_with_omniauth(info)
-    #puts info['name']
-    #puts info.user['displayName']
-    #puts info.inspect
+  def self.find_from_omniauth(info)
+    User.where(:name => info['info']['name']).first
+  end
+
+  def self.create_from_omniauth(info)
     create(name: info['info']['name'])
   end
 
