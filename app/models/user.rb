@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :name
-  
+  has_many :identities
+
   def self.find_from_omniauth(info)
     User.where(:name => info['info']['name']).first
   end
